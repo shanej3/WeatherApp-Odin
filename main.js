@@ -38,6 +38,7 @@ async function printAPIData(search_query) {
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     printAPIData(input.value);
+    input.value = '';
     
 });
 

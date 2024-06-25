@@ -26,6 +26,7 @@ body {
     font-size : 1.5rem;
     font-family: "Ubuntu", sans-serif;
     font-weight : 500;
+    width : clamp(5rem, 20rem, 30rem);
 }
 #submit-button {
     font-size : 1.5rem;
@@ -33,6 +34,7 @@ body {
     border : none;
     background-color: none;
     background : none;
+    margin-left : 0.5rem;
 }
 #submit-button:hover {
     background-color: rgb(172, 172, 172);
@@ -42,7 +44,7 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 #left-half {
-    max-width: 10rem;
+    width : clamp(5rem, 10rem, 11rem);
 }
 #location-name {
     padding : 0.5rem;
