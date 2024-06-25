@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 body {
+    font-family: "Ubuntu", sans-serif;
     height : 100%;
     width : 100%;
     position : absolute;
@@ -8,19 +11,62 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-
+#header {
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+}
 #main-box {
     display : grid;
     grid-template-rows: 1fr 4fr;
+    background-color: rgb(228, 228, 228);
+    padding : 1rem;
+    border-radius : 0.5rem;
+}
+#input-box {
+    width : 20rem;
+    font-size : 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight : 500;
+}
+#submit-button {
+    font-size : 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    border : none;
+    background-color: none;
+    background : none;
+}
+#submit-button:hover {
+    background-color: rgb(202, 202, 202);
 }
 #main-content {
     display : grid;
-    grid-template-rows: 1fr 1fr;
-}
-#top-half {
-
-}
-#bottom-half {
-    display : grid;
     grid-template-columns: 1fr 1fr;
+}
+#left-half {
+    max-width: 10rem;
+}
+#location-name {
+    padding : 0.5rem;
+}
+#bottom-left {
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+}
+#right-half {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#current-weather {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+#current-temp {
+    font-size : 3rem;
+}
+#current-condition {
+    font-family: "Ubuntu", sans-serif;
 }
