@@ -1,1 +1,1 @@
-# Basic-HTML-template
+Practice project for learning JS/API calls
