@@ -1,0 +1,26 @@
+body {
+    height : 100%;
+    width : 100%;
+    position : absolute;
+    overflow : hidden;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-box {
+    display : grid;
+    grid-template-rows: 1fr 4fr;
+}
+#main-content {
+    display : grid;
+    grid-template-rows: 1fr 1fr;
+}
+#top-half {
+
+}
+#bottom-half {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+}
