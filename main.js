@@ -1,5 +1,5 @@
-import {main_box, header, form, input, 
-    submit_button, main_content, location_name, current_temp, current_heat_index, current_humidity, 
+// import html variables
+import {form, input, location_name, current_temp, current_heat_index, current_humidity, 
     condition_image, current_condition} from './html_variables.js';
 
 async function accessAPI(search_query) {
@@ -9,8 +9,8 @@ async function accessAPI(search_query) {
 }   
 
 async function processAPIData(search_query) {
+    // this function retrieves only the needed data from the API
     const data = await accessAPI(search_query);
-    console.log(data);
     const city_name = data.location.name;
     const region = data.location.region;
     const country = data.location.country;
@@ -19,14 +19,12 @@ async function processAPIData(search_query) {
     const humidity = data.current.humidity;
     const condition = data.current.condition.text;
     const condition_img = data.current.condition.icon;
-    console.log(condition_img);
-
     const necessary_data = {city_name, region, country, temperature_f, heat_index_f, humidity, condition, condition_img};
     return necessary_data;
 }
 
 async function printAPIData(search_query) {
-    /* remember: data is an OBJECT */
+    // take needed data from API, display on HTML
     const retrieved_data = await processAPIData(search_query);
     current_temp.textContent = retrieved_data.temperature_f;
     condition_image.src = retrieved_data.condition_img;
@@ -37,9 +35,6 @@ async function printAPIData(search_query) {
 
 }
     
-
-
-//form.addEventListener("submit", printAPIData(input.value).temperature_f);
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     printAPIData(input.value);

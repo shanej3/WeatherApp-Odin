@@ -18,13 +18,11 @@ body {
 }
 #main-box {
     display : grid;
-    grid-template-rows: 1fr 4fr;
     background-color: rgb(228, 228, 228);
     padding : 1rem;
     border-radius : 0.5rem;
 }
 #input-box {
-    width : 20rem;
     font-size : 1.5rem;
     font-family: "Ubuntu", sans-serif;
     font-weight : 500;
@@ -37,7 +35,7 @@ body {
     background : none;
 }
 #submit-button:hover {
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(172, 172, 172);
 }
 #main-content {
     display : grid;
